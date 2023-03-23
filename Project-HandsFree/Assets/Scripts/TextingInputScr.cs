@@ -27,10 +27,10 @@ public class TextingInputScr : MonoBehaviour
     {
         // selectedRandNum = Random.Range(3f, 200.0f);
         countdownNum += Time.deltaTime;
-        if (Input.GetMouseButtonDown(0) && fpsPlayer.GetComponent<LookingAtPhoneScr>().isLooking)
+        if (Input.GetMouseButtonDown(0) && fpsPlayer.GetComponent<LookingAtPhoneScr>().isLooking && !hasResponded)
         {
             // selectedRandNum = Random.Range(0f, 50.0f);
-            selectedRandNum = Random.Range(0f, 20.0f);
+            selectedRandNum = Random.Range(0f, 10.0f);
             textSentSound.SetActive(false);
             textSentSound.SetActive(true);
             countdownNum = 0f;
