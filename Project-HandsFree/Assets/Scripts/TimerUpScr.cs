@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class TimerScr : MonoBehaviour
+public class TimerUpScr : MonoBehaviour
 {
     [SerializeField]
      private TextMeshProUGUI timerUILabel; //drag UI Text object here via Inspector
