@@ -9,13 +9,28 @@ public class CountdownTimerScr : MonoBehaviour
     public float timeRemaining = 10;
     public bool timerIsRunning = false;
     public TextMeshProUGUI timeText;
+
+    public GameObject originObject;
+
     private void Start()
     {
         // Starts the timer automatically
-        timerIsRunning = true;
+        //timerIsRunning = true;
     }
     void Update()
     {
+        if (originObject.GetComponent<TextingInputScr>().hasResponded)
+        {
+            timerIsRunning = false;
+            //timeRemaining = Random.Range(0f, 10.0f);
+            timeRemaining = 10;
+        }
+
+        if (!originObject.GetComponent<TextingInputScr>().hasResponded)
+        {
+            timerIsRunning = true;
+        }
+
         if (timerIsRunning)
         {
             if (timeRemaining > 0)
