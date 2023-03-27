@@ -11,6 +11,9 @@ public class CountdownTimerScr : MonoBehaviour
     public TextMeshProUGUI timeText;
 
     public GameObject originObject;
+    //public GameObject carObject;
+    public GameObject LoseCanvas;
+    public GameObject LoseText;
 
     private void Start()
     {
@@ -43,6 +46,14 @@ public class CountdownTimerScr : MonoBehaviour
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                LoseCanvas.SetActive(true);
+                LoseText.SetActive(true);
+                Time.timeScale = 0;
+                //carObject.GetComponent<CarUserControl>().enabled = false;
+                //GameObject.Find("CartoonSportCar").GetComponent<CarUserControl>().enabled = false;
+
             }
         }
     }
