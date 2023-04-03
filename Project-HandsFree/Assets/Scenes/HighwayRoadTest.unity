@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -133,6 +133,10 @@ PrefabInstance:
     - target: {fileID: 1825100171794020, guid: a2ece446df2453e44852f1235fe8d1c0, type: 3}
       propertyPath: m_Name
       value: vz03_ red
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825100171794020, guid: a2ece446df2453e44852f1235fe8d1c0, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     - target: {fileID: 4770927669921066, guid: a2ece446df2453e44852f1235fe8d1c0, type: 3}
       propertyPath: m_RootOrder
@@ -617,6 +621,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &178511203
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889665799}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1, z: 3.8}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &196499466
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,6 +993,10 @@ PrefabInstance:
     - target: {fileID: 1299605882708352, guid: ee34066a92a2bd649b5f63f3c26dc515, type: 3}
       propertyPath: m_Name
       value: vz09_ yellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299605882708352, guid: ee34066a92a2bd649b5f63f3c26dc515, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     - target: {fileID: 4508481210826426, guid: ee34066a92a2bd649b5f63f3c26dc515, type: 3}
       propertyPath: m_RootOrder
@@ -3356,6 +3377,19 @@ MonoBehaviour:
   targetObject: {fileID: 1153403267}
   speed: 25
   walkRadius: 500
+--- !u!65 &1203599101
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314725333}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1, z: 3.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &1220673302
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -11570,6 +11604,19 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!65 &1370614207
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36329396}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1, z: 3.8}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1417907072 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1449200688522886, guid: a6068151ae56bfe41b9a47a49cb3bcac, type: 3}
@@ -11793,11 +11840,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752135011}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cafecc6b733a4d4087f7529735a6d5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 39d5b9a2f78ef8a489dd032dadb1f227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeRemaining: 10
+  timerIsRunning: 0
+  timeText: {fileID: 1752135014}
+  originObject: {fileID: 0}
+  LoseCanvas: {fileID: 196499466}
+  LoseText: {fileID: 0}
 --- !u!114 &1752135014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12194,6 +12247,10 @@ PrefabInstance:
     - target: {fileID: 1664926602523628, guid: d905337fd8451a84a83e0a83c56f7b3a, type: 3}
       propertyPath: m_Name
       value: vz05_ sand
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664926602523628, guid: d905337fd8451a84a83e0a83c56f7b3a, type: 3}
+      propertyPath: m_TagString
+      value: Collision
       objectReference: {fileID: 0}
     - target: {fileID: 4540305338940862, guid: d905337fd8451a84a83e0a83c56f7b3a, type: 3}
       propertyPath: m_RootOrder
@@ -12984,10 +13041,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
